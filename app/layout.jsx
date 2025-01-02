@@ -4,10 +4,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-const inter=Inter({subsets:['latin']});
 import AuthWrapper from "@/components/AuthWrapper";
 
 
+const inter=Inter({subsets:['latin']});
 
 export const metadata = {
   title: "Bookit App| Book a room",
@@ -19,10 +19,10 @@ export default function RootLayout({ children }) {
     <AuthWrapper>
     <html lang="en">
       <body
-        className={inter.classname}
+        className={inter.classname} 
       >
         <Header/>
-        <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <main className=" px-4 py-6 sm:px-6 lg:px-8 bg-custom-lightblue ">
 
         {children}
         </main>

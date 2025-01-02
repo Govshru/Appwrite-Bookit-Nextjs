@@ -10,6 +10,14 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'custom-brown': '#AC8968',
+        
+        'custom-darkpink':'#9A1750',
+        'custom-lightpink':'#E3AFBC',
+        'custom-lightblue':'#E3E2DF',
+        
+
+
       },
     },
   },

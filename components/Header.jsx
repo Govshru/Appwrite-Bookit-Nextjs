@@ -29,8 +29,8 @@ toast.error(error);
   }
   return (
     <>
-    <header className="bg-gray-100">
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <header className='bg-custom-darkpink'>
+      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-custom-lightpink">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/">
@@ -38,9 +38,15 @@ toast.error(error);
             </Link>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link
+              <Link
                   href="/"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-custom-lightpink  hover:bg-custom-lightpink hover:text-custom-darkpink"
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/rooms"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-custom-lightpink  hover:bg-custom-lightpink hover:text-custom-darkpink"
                 >
                   Rooms
                 </Link>
@@ -49,13 +55,13 @@ toast.error(error);
                   <>
                   <Link
                   href="/Bookings"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-custom-lightpink  hover:bg-custom-lightpink hover:text-custom-darkpink"
                 >
                   Bookings
                 </Link>
                 <Link
                   href="/rooms/add"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-custom-lightpink  hover:bg-custom-lightpink hover:text-custom-darkpink"
                 >
                   Add Room
                 </Link>
@@ -74,25 +80,25 @@ toast.error(error);
 
 <Link
                 href="/Login"
-                className="mr-3 text-gray-800 hover:text-gray-600"
+                className="mr-3 text-custom-lightpink  hover:bg-custom-lightpink hover:text-custom-darkpink"
               >
               <FaSignInAlt className='inline mr-1'/> Login
               </Link>
 
               <Link
                 href="/Signup"
-                className="mr-3 text-gray-800 hover:text-gray-600"
+                className="mr-3 text-custom-lightpink  hover:bg-custom-lightpink hover:text-custom-darkpink"
               >
                 <FaUser className='inline mr-1'/> Register
               </Link>
                 </>
               )}
-              <Link href="/rooms/my">
-              <FaBuilding className='inline mr-1'/> My Rooms
+              <Link href="/rooms/my" className='rounded-md px-3 py-2  hover:bg-custom-lightpink hover:text-custom-darkpink'>
+              <FaBuilding className='inline mr-1 '/> My Rooms
               </Link>
               <button onClick={handleLogout}
                 
-                className="mx-3 text-gray-800 hover:text-gray-600"
+                className="mx-3 rounded-md px-3 py-2 text-custom-lightpink  hover:bg-custom-lightpink hover:text-custom-darkpink"
               >
                 <FaSignOutAlt className='inline mr-1'/> Sign Out
               </button>
@@ -112,13 +118,13 @@ toast.error(error);
           </Link>
           {/* <!-- Logged In Only --> */}
           <Link
-            href="/bookings.html"
+            href="/Bookings"
             className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
           >
             Bookings
           </Link>
           <Link
-            href="/add-room.html"
+            href="/rooms/add"
             className="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-700 hover:text-white"
           >
             Add Room

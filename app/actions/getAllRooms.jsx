@@ -1,24 +1,26 @@
+
+
 "use server";
 import { createAdminClient } from "@/config/appwrite";
-// import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
+import { Query } from "node-appwrite";
 
-async function getAllRooms() {
+async function getRooms(offset = 0, limit = 2) {
   try {
     const { databases } = await createAdminClient();
-    //fetch rooms
+    // Fetch rooms with pagination
     const { documents: rooms } = await databases.listDocuments(
       process.env.NEXT_PUBLIC_APPWRITE_DATABASE,
-      process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_ROOMS
+      process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_ROOMS,
+      [
+        Query.limit(limit), // Limit the number of rooms fetched
+        Query.offset(offset), // Set the offset for pagination
+      ]
     );
-
-    //Revalidate the cache for this path
-    //  revalidatePath('/' ,'layout');
 
     return rooms;
   } catch (error) {
     console.log("failed to get rooms", error);
-    redirect("/error");
+    throw error;
   }
 }
-export default getAllRooms;
+export default getRooms;

@@ -23,7 +23,7 @@ const handleCancelClick=async()=>{
 }
     return(<button
         href onClick={handleCancelClick}
-        className="bg-red-500 text-white px-4 py-2 rounded w-full sm:w-auto text-center hover:bg-red-700"
+        className="bg-custom-darkpink text-white px-4 py-2 rounded w-full sm:w-auto text-center hover:scale-105"
       >
         Cancel Booking
       </button>);

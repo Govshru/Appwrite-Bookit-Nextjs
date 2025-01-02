@@ -1,25 +1,13 @@
-// import rooms from '@/data/rooms.json';
+import React from 'react'
+import AutoImageSlider from '@/components/AutoImageSlider'
 
-import RoomCard from '@/components/RoomCard';
-import Heading from '@/components/Heading';
-import getAllRooms from './actions/getAllRooms';
-
-
-
-
-export default async function Home() {
-  
-  
-  const rooms= await getAllRooms();
-    
+const page = () => {
   return (
-   <>
-   <Heading title='Available Rooms'/>
-  
-   {rooms.length>0 ? (
-rooms.map((room)=><RoomCard room={room} key ={room.$id}/>)
-   ):( <p>No rooms available at the moment</p>)}
-   </>
-  );
+    <div>
+    
+      <AutoImageSlider />
+    </div>
+  )
 }
- 
+
+export default page
